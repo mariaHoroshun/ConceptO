@@ -19,6 +19,8 @@ import { ClassPageComponent } from './class-page/class-page.component';
 import { QuestPageComponent } from './quest-page/quest-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { CharacterCardComponent } from './components/character-card/character-card.component';
 
 registerLocaleData(en);
 
@@ -30,7 +32,8 @@ registerLocaleData(en);
     ClassPageComponent,
     QuestPageComponent,
     LoginPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzCarouselModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
