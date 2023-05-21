@@ -1,0 +1,73 @@
+<nz-modal
+   [nzVisible]="true"
+   nzWidth="1000px"
+   nzTitle="Сектор Газа - Грязная Кровь"
+   (nzOnCancel)="onClose()"
+    (nzOnOk)="onClose()"
+   
+>
+    <ng-container *nzModalContent >
+        <div nz-row [nzGutter]="[8,8]" nzAlign="bottom" style="height: 700px; overflow: auto;">
+            <div nz-col [nzSpan]="12">
+                <div>
+                    <label>Имя</label>
+                    <p>Габриэль Сэт</p>
+                </div>
+                <div>
+                    <label>Класс</label>
+                    <p>Защитник Империума</p>
+                </div>
+                <div>
+                    <label>Подкласс</label>
+                    <p>Магистр Ордена</p>
+                </div>
+                <div>
+                    <label>Раса</label>
+                    <p>Адептус Астартес</p>
+                </div>
+                <div>
+                    <label>Предыстория</label>
+                    <p>Mega badass dude. Габриэль Сет стал магистром ордена Расчленителей, 
+                        когда его орден находился на краю небытия. 
+                        Он поклялся, что если Расчленителям суждено погибнуть, 
+                        то истории об их доблестных деяниях будут рассказывать с гордостью
+                        , а не перешёптываться о жестокости и безумии.
+                    </p>
+                </div>
+                <div>
+                    <label>Черты характера</label>
+                    <p>Эджи подросток, запертый в теле 300-летнего суперсолдата. <i>no thoughts - 
+                        head empty, only dreams about upcoming battle </i>
+                        <span nz-icon nzType="heart" nzTheme="outline"></span>
+                    </p>
+                </div>
+                <div>
+                        <label>Описание</label>
+                    <p>Однажды после пьянки возвращался домой,
+                    Я был в умат и песни весело пел.
+                    Мой путь пролегал через старый погост,
+                    Был бы я трезвый - сразу б я ох.ел.</p>
+                    <p>Но я не был трезв, и было мне до пи.ды,
+                        Мне смелость придавал выпитый кир,
+                        И тут передо мною затрещали кусты,
+                        Из них восстал кровавый старый вампир.</p>
+                    <p>Кровь, кровь, моя грязная кровь!..
+                        Напившись крови моей, дохнет комар.
+                        Грязная кровь. Откуда чистой ей быть -
+                        Ведь сорок лет я каждый вечер в угар.</p>
+                </div>
+                <div> 
+                    <label nz-checkbox>Отображать статы</label>
+                </div>
+            </div>
+       
+            <div nz-col [nzSpan]="12">
+                    <img src="../../assets/page-images/gab-white.jpeg" alt="pic"/>
+            </div>
+        </div>    
+  </ng-container>
+  <div *nzModalFooter>
+    <button nz-button nzType="default" (click)="onClose()">Закрыть</button>
+    <button nz-button nzType="primary" (click)="onClose()">Сохранить к себе</button>
+  </div>
+</nz-modal>

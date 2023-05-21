@@ -20,7 +20,18 @@ import { QuestPageComponent } from './quest-page/quest-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { CharacterCardComponent } from './components/character-card/character-card.component';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { ContentCardComponent } from './components/content-card/content-card.component';
+import { ContentInlineComponent } from './components/content-inline/content-inline.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ViewCharacterModalComponent } from './modals/view-character-modal/view-character-modal.component';
+import { CreateCharacterModalComponent } from './modals/create-character-modal/create-character-modal.component';
+import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 
 registerLocaleData(en);
 
@@ -33,7 +44,11 @@ registerLocaleData(en);
     QuestPageComponent,
     LoginPageComponent,
     HomePageComponent,
-    CharacterCardComponent
+    ContentCardComponent,
+    ContentInlineComponent,
+    ViewCharacterModalComponent,
+    CreateCharacterModalComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -45,6 +60,13 @@ registerLocaleData(en);
     NzLayoutModule,
     NzMenuModule,
     NzCarouselModule,
+    NzGridModule,
+    NzSwitchModule,
+    NzCardModule,
+    NzModalModule,
+    NzMessageModule,
+    NzCheckboxModule,
+    NzButtonModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

@@ -1,1 +1,46 @@
-<p>character-page works!</p>
+<div nz-col [nzSpan]="24" class="header-card">
+    <span>Персонажи</span>
+</div>
+<div nz-row [nzGutter]="[16,16]" nzAlign="bottom">
+    <div nz-col [nzSpan]="18">
+    </div>
+    <div nz-col [nzSpan]="6">
+        <label>Отображать карточки</label >
+        <nz-switch [ngModel]="isCard"></nz-switch>
+    
+        <button nz-button nzType="primary" style="margin-left: 10px;" (click)="onNewCharacter()">
+            <span nz-icon nzType="file-add"></span>
+            Новый персонаж
+          </button>      
+    </div>
+    <div nz-col [nzSpan]="24">
+        <h1>Мои персонажи</h1>
+    </div>
+    <div nz-col [nzSpan]="24" *ngIf="isCard" class="card-box">   
+        <app-content-card></app-content-card> 
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+    </div>
+    <div nz-col [nzSpan]="24">
+        <h1>Сохраненные персонажи</h1>
+    </div>
+    <div nz-col [nzSpan]="24" *ngIf="isCard" class="card-box">   
+        <app-content-card></app-content-card> 
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+        <app-content-card></app-content-card>
+    </div>
+    <div nz-col [nzSpan]="24" *ngIf="!isCard">
+        <app-content-inline></app-content-inline>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+<nz-modal
+   [nzVisible]="true"
+   nzWidth="1000px"
+   nzTitle="Новый персонаж"
+   (nzOnCancel)="onClose()"
+   (nzOnOk)="onClose()"
+>
+    <ng-container *nzModalContent >
+        <h3>Обязательные поля</h3>
+        <ul>
+            <li>Имя</li>
+            <li>Раса</li>
+            <li>Класс/подкласс</li>
+            <li>Что если мультикласс? добавить комментарии от автора</li>
+            <li>Общая идея</li>    
+        </ul>
+        <h3>Дополнтельные поля</h3>
+        <ul>
+            <li>Черты характера, идеалы и тд</li>
+            <li>Оружие</li>
+            <li>Доспехи</li>
+            <li>Языки</li>
+            <li>Возможность заполнить карточку персонажа по статам</li>    
+        </ul>
+        <h3>Блоки текста, которые сам можешь сколько угодно добавлять и как угодно называть</h3>
+        <h3>Референс-пикчи</h3>
+    </ng-container>
+    <div *nzModalFooter>
+        <button nz-button nzType="default" (click)="onClose()">Закрыть</button>
+        <button nz-button nzType="primary" (click)="onClose()">Сохранить персонажа</button>
+    </div>
+</nz-modal>

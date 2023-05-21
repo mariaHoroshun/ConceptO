@@ -24,6 +24,15 @@
   transition: all .3s,padding 0s;
 }
 
+.header-login-trigger{
+  height: 64px;
+  padding: 20px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 87%;
+  transition: all .3s,padding 0s;
+}
+
 .trigger:hover {
   color: #1890ff;
 }
@@ -76,5 +85,7 @@ nz-content {
 .inner-content {
   padding: 24px;
   background: #fff;
+  overflow-y: auto;
+  
   height: 100%;
 }

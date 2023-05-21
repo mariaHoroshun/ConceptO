@@ -1,1 +1,11 @@
-<p>login-page works!</p>
+<nz-modal
+   [nzVisible]="true"
+   nzWidth="600px"
+   nzTitle="Добро пожаловать!"
+   (nzOnCancel)="onClose()"
+    (nzOnOk)="onClose()"
+>
+<ng-container *nzModalContent>
+
+</ng-container>
+</nz-modal>
